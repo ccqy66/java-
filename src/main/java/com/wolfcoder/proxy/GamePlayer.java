@@ -3,5 +3,21 @@ package com.wolfcoder.proxy;
 /**
  * Created by Administrator on 2016/10/31.
  */
-public class GamePlayer {
+public class GamePlayer implements IGamePlayer{
+    private String name;
+    public GamePlayer(String name) {
+        this.name = name;
+    }
+
+    public void login(String user, String password) {
+        System.out.println("user:"+user+"has login");
+    }
+
+    public void killBoss() {
+        System.out.println("user:"+name+"kill boss");
+    }
+
+    public void upgrade() {
+        System.out.println("user:"+name+"upgrade");
+    }
 }
